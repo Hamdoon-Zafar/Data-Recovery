@@ -223,13 +223,13 @@ Integrity Checks Failed : {len(results['integrity_fail'])}
 Recovered Files:
 """
     for f in results["recovered"]:
-        status = "✅ VERIFIED" if f in results["integrity_pass"] else "⚠️  UNVERIFIED"
+        status = "VERIFIED" if f in results["integrity_pass"] else "⚠️  UNVERIFIED"
         report += f"  [{status}] {f}\n"
 
     if results["failed"]:
         report += "\nFailed Recoveries:\n"
         for f in results["failed"]:
-            report += f"  [❌ FAILED] {f}\n"
+            report += f"  [FAILED] {f}\n"
 
     report += f"""
 ────────────────────────────────────────────────────────────────────────────────
@@ -324,8 +324,8 @@ def main():
 
     generate_report(original_hashes, deleted, results)
 
-    print(f"\n✅ Simulation complete. Check '{RECOVERY_DIR}' for recovered files.")
-    print(f"📄 Full report saved to '{REPORT_DIR}'.\n")
+    print(f"\nSimulation complete. Check '{RECOVERY_DIR}' for recovered files.")
+    print(f"Full report saved to '{REPORT_DIR}'.\n")
 
 
 if __name__ == "__main__":
