@@ -1,0 +1,9 @@
+# Task 1: Lost Data Retrieval — Python Dependencies
+# Core standard library modules are used (no heavy dependencies)
+# The scripts below are optional enhancements
+
+# Rich terminal output (optional, for colored CLI display)
+rich>=13.0.0
+
+# Tabulate for pretty-printing recovery tables
+tabulate>=0.9.0
