@@ -6,7 +6,7 @@
 
 ---
 
-## 📌 Project Overview
+##  Project Overview
 
 This project demonstrates the recovery of permanently deleted files from FAT32 and NTFS file systems. It simulates a real-world data loss scenario and provides both automated Python-based recovery logic and integration wrappers for professional forensic tools (TestDisk and Recuva).
 
@@ -19,7 +19,7 @@ This project demonstrates the recovery of permanently deleted files from FAT32 a
 
 ---
 
-## 📁 Repository Structure
+##  Repository Structure
 
 ```
 task1_data_recovery/
@@ -33,7 +33,7 @@ task1_data_recovery/
 
 ---
 
-## ⚙️ Setup & Requirements
+## Setup & Requirements
 
 ### System Requirements
 - Python 3.8 or higher
@@ -55,7 +55,7 @@ pip install -r requirements.txt
 
 ---
 
-## 🚀 Running the Scripts
+##  Running the Scripts
 
 ### Script 1: Full Recovery Simulation
 
@@ -139,7 +139,7 @@ DATA PERMANENTLY LOST
 
 ---
 
-## 📊 Sample Recovery Report Output
+##  Sample Recovery Report Output
 
 ```
 ================================================================================
@@ -152,23 +152,19 @@ Recovery Rate           : 100.0%
 Integrity Checks Passed : 8
 Integrity Checks Failed : 0
 
-  [✅ VERIFIED] financial_report.txt    | MD5 Match
-  [✅ VERIFIED] project_proposal.txt    | MD5 Match
-  [✅ VERIFIED] sample_photo_1.txt      | MD5 Match
+  [ VERIFIED] financial_report.txt    | MD5 Match
+  [ VERIFIED] project_proposal.txt    | MD5 Match
+  [ VERIFIED] sample_photo_1.txt      | MD5 Match
   ...
 ================================================================================
 ```
 
 ---
 
-## ⚠️ Forensic Disclaimer
+##  Forensic Disclaimer
 
 > These scripts are developed **strictly for educational and authorized forensic purposes**. Running data recovery tools on drives you do not own or have explicit permission to access may violate computer fraud laws. Always operate within a controlled lab environment.
 
 ---
 
-## 👤 Author
 
-**Name:** [Your Name]  
-**Internship Domain:** Cybersecurity  
-**Report:** Combined Internship Capstone Report — Data Recovery Systems & Predictive Fraud Analytics
