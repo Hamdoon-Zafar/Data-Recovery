@@ -122,10 +122,10 @@ def parse_recuva_csv(csv_path: Path) -> list:
         return []
 
     STATE_MAP = {
-        "0": "🟢 Excellent",
-        "1": "🟡 Good",
-        "2": "🟠 Poor",
-        "3": "🔴 Unrecoverable",
+        "0": "Excellent",
+        "1": "Good",
+        "2": "Poor",
+        "3": "Unrecoverable",
     }
 
     results = []
@@ -164,7 +164,7 @@ def generate_recuva_report(results: list) -> str:
 Scan Time         : {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
 Total Files Found : {total}
 Recoverable       : {recoverable} ({recoverable/total*100:.1f}%)
-Unrecoverable     : {state_counts.get('🔴 Unrecoverable', 0)}
+Unrecoverable     : {state_counts.get(' Unrecoverable', 0)}
 
 Recovery State Breakdown:
 """
@@ -175,7 +175,7 @@ Recovery State Breakdown:
 --------------------------------------------------------------------------------
 FILES BY RECOVERY STATE:
 """
-    for state_filter in ["🟢 Excellent", "🟡 Good", "🟠 Poor", "🔴 Unrecoverable"]:
+    for state_filter in ["Excellent", "Good", "Poor", "Unrecoverable"]:
         filtered = [r for r in results if r.get("State_Label") == state_filter]
         if filtered:
             report += f"\n{state_filter} ({len(filtered)} files):\n"
@@ -231,7 +231,7 @@ def main():
         backup_dir = Path("recovery_lab/deleted_files_backup")
         results    = python_fallback_recovery(backup_dir, RECOVERY_OUTPUT)
 
-        print(f"\n✅ Fallback recovery complete:")
+        print(f"\n Fallback recovery complete:")
         print(f"   Recovered : {len(results['recovered'])} files")
         print(f"   Failed    : {len(results['failed'])} files")
         print(f"   Output    : {RECOVERY_OUTPUT.resolve()}")
